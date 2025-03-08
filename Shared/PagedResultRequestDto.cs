@@ -1,6 +1,6 @@
 ﻿using FluentValidation;
 
-namespace Shared
+namespace Api.Shared
 {
     public class PagedResultRequestDto
     {

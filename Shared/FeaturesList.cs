@@ -1,4 +1,4 @@
-﻿namespace Shared
+﻿namespace Api.Shared
 {
     public class FeaturesList
     {

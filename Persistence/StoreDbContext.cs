@@ -1,7 +1,7 @@
-﻿using Domain.Models;
+﻿using Api.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace Persistence
+namespace Api.Persistence
 {
     public class StoreDbContext : DbContext
     {

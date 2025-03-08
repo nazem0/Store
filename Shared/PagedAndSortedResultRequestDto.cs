@@ -1,7 +1,7 @@
-﻿using FluentValidation;
-using Shared.Extensions;
+﻿using Api.Extensions;
+using FluentValidation;
 
-namespace Shared
+namespace Api.Shared
 {
     public class PagedAndSortedResultRequestDto<T> : PagedResultRequestDto where T : ISortableEntity
     {

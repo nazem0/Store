@@ -1,5 +1,5 @@
-﻿using static Shared.IoC;
-namespace Persistence
+﻿using static Api.Shared.IoC;
+namespace Api.Persistence
 {
     public class UnitOfWork(StoreDbContext dbContext) : IScoped
     {

@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
 
-namespace Shared
+namespace Api.Shared
 {
     public static class IoC
     {
