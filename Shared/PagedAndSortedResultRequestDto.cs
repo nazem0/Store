@@ -1,5 +1,4 @@
 ﻿using Api.Extensions;
-using FluentValidation;
 
 namespace Api.Shared
 {

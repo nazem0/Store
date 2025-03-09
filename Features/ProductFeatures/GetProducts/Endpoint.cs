@@ -1,5 +1,4 @@
 ﻿using Api.Shared;
-using FastEndpoints;
 
 namespace Api.Features.ProductFeatures.GetProducts
 {

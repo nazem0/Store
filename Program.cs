@@ -1,6 +1,7 @@
+global using FastEndpoints;
+global using FluentValidation;
 using Api.Persistence;
 using Api.Shared;
-using FastEndpoints;
 using FastEndpoints.Swagger;
 namespace Api
 {

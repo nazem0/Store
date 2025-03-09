@@ -1,6 +1,5 @@
 ﻿using Api.Models;
 using Api.Shared;
-using FluentValidation;
 using System.Linq.Dynamic.Core;
 
 namespace Api.Features.ProductFeatures.GetProducts

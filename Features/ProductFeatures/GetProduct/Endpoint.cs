@@ -1,6 +1,4 @@
 ﻿using Api.Shared;
-using FastEndpoints;
-using Microsoft.AspNetCore.Http;
 
 namespace Api.Features.ProductFeatures.GetProduct
 {

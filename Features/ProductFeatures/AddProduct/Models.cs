@@ -1,6 +1,4 @@
 ﻿using Api.Models;
-using FastEndpoints;
-using FluentValidation;
 
 namespace Api.Features.ProductFeatures.AddProduct
 {

@@ -1,6 +1,5 @@
 ﻿using Api.Persistence;
 using Api.Shared;
-using FastEndpoints;
 
 namespace Api.Features.ProductFeatures.AddProduct
 {

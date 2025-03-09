@@ -1,5 +1,4 @@
 ﻿using Api.Models;
-using FastEndpoints;
 
 namespace Api.Features.ProductFeatures.AddProduct
 {
