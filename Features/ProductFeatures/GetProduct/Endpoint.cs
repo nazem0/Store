@@ -1,6 +1,4 @@
-﻿using Api.Shared;
-
-namespace Api.Features.ProductFeatures.GetProduct
+﻿namespace Api.Features.ProductFeatures.GetProduct
 {
     internal sealed class Endpoint : Endpoint<Request, Response>
     {

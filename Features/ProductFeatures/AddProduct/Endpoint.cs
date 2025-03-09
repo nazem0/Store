@@ -1,5 +1,4 @@
 ﻿using Api.Persistence;
-using Api.Shared;
 
 namespace Api.Features.ProductFeatures.AddProduct
 {

@@ -1,9 +1,11 @@
 ﻿using Api.Models;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace Api.Persistence
 {
-    public class StoreDbContext : DbContext
+    public class StoreDbContext : IdentityDbContext<User, IdentityRole<Guid>, Guid>
     {
         public StoreDbContext(DbContextOptions dbContextOptions) : base(dbContextOptions)
         {
