@@ -14,8 +14,8 @@ namespace Api.Features.ProductFeatures.AddProduct
                 RuleFor(x => x.Name)
                     .NotEmpty()
                     .WithMessage("Name is required!")
-                    .MaximumLength(ProductConstants.NameMaxLength)
-                    .WithMessage($"Name cannot {ProductConstants.NameMaxLength} letters");
+                    .MaximumLength(Product.BusinessRoles.NameMaxLength)
+                    .WithMessage($"Name cannot {Product.BusinessRoles.NameMaxLength} letters");
 
                 RuleFor(x => x.Price)
                     .NotEmpty()

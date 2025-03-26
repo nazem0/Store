@@ -11,7 +11,7 @@ namespace Api.Persistence.Configurations
             b.HasKey(x => x.Id);
             b.Property(x => x.Name)
                 .IsRequired()
-                .HasMaxLength(ProductConstants.NameMaxLength);
+                .HasMaxLength(Product.BusinessRoles.NameMaxLength);
             b.ToTable(nameof(Product));
         }
     }

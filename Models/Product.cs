@@ -19,10 +19,10 @@ namespace Api.Models
         {
             return [nameof(Id), nameof(Name), nameof(Price), nameof(Quantity)];
         }
+        public static class BusinessRoles
+        {
+            public const int NameMaxLength = 20;
+        }
     }
 
-    public static class ProductConstants
-    {
-        public const int NameMaxLength = 20;
-    }
 }
