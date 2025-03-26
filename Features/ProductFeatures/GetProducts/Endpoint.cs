@@ -12,15 +12,7 @@
         public override async Task HandleAsync(Request r, CancellationToken c)
         {
 
-            var response = Data.GetProducts(new Data.GetProductsParams
-            {
-                MaxPrice = r.MaxPrice,
-                MinPrice = r.MinPrice,
-                Name = r.Name,
-                Page = r.Page,
-                PageSize = r.PageSize,
-                Sorting = r.Sorting
-            });
+            var response = Data.GetProducts(r);
             await SendOkAsync(response, c);
         }
     }

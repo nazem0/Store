@@ -7,16 +7,7 @@ namespace Api.Features.ProductFeatures.GetProducts
 {
     internal sealed class Data(StoreDbContext db) : IoC.IScoped
     {
-        public class GetProductsParams
-        {
-            public string? Name { get; set; }
-            public decimal? MinPrice { get; set; }
-            public decimal? MaxPrice { get; set; }
-            public int Page { get; set; }
-            public int PageSize { get; set; }
-            public string Sorting { get; set; } = Product.GetSortingKeys().First();
-        }
-        public Response GetProducts(GetProductsParams input)
+        public Response GetProducts(Request input)
         {
             //Filter
             var products =
@@ -25,9 +16,16 @@ namespace Api.Features.ProductFeatures.GetProducts
                 .WhereIf(input.MinPrice.HasValue, x => x.Price >= input.MinPrice)
                 .WhereIf(input.MaxPrice.HasValue, x => x.Price <= input.MaxPrice);
             //Order
-            if (Product.GetSortingKeys().Any(x => x.Equals(input.Sorting, StringComparison.OrdinalIgnoreCase)))
+            bool isSuitableOrderingKey =
+                !string.IsNullOrWhiteSpace(input.Sorting) &&
+                Product.GetSortingKeys().Any(x => x.Equals(input.Sorting, StringComparison.OrdinalIgnoreCase));
+            if (isSuitableOrderingKey)
             {
-                products = products.OrderBy(input.Sorting);
+                products = products.OrderBy(input.Sorting!);
+            }
+            else
+            {
+                products = products.OrderByDescending(x => x.Id);
             }
             //Projection
             var list =

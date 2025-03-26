@@ -14,7 +14,11 @@ namespace Api.Features.ProductFeatures.GetProducts
         {
             public Validator()
             {
+                RuleFor(x => x.MinPrice)
+                    .GreaterThanOrEqualTo(0);
+
                 RuleFor(x => x.MaxPrice)
+                    .GreaterThanOrEqualTo(0)
                     .GreaterThan(x => x.MinPrice)
                     .When(x => x.MinPrice.HasValue)
                     .WithMessage("Maximum price cannot be less than minimum price");
