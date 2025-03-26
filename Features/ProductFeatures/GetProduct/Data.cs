@@ -5,7 +5,7 @@ namespace Api.Features.ProductFeatures.GetProduct
 {
     internal sealed class Data(StoreDbContext db) : IScoped
     {
-        public Response? GetProductById(int id)
+        public Response? GetProductById(Request input)
         {
             var response =
                 db
@@ -17,7 +17,7 @@ namespace Api.Features.ProductFeatures.GetProduct
                     Price = x.Price,
                     Quantity = x.Quantity,
                 })
-                .FirstOrDefault(x => x.Id == id);
+                .FirstOrDefault(x => x.Id == input.Id);
             return response;
         }
     }

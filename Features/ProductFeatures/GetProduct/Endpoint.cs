@@ -16,7 +16,7 @@
 
         public override async Task HandleAsync(Request r, CancellationToken c)
         {
-            Response? product = Data.GetProductById(r.Id);
+            Response? product = Data.GetProductById(r);
             if (product == null) await SendNotFoundAsync(c);
             else await SendOkAsync(product, c);
         }
